@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Spotify Wrapped</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; }
+        h1 { margin-top: 2rem; }
+        .track { margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <h1>Your Top Spotify Tracks</h1>
+    {% for track in tracks %}
+        <div class="track">{{ loop.index }}. {{ track.name }} by {{ track.artist }}</div>
+    {% endfor %}
+</body>
+</html>
